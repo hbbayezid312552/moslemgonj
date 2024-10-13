@@ -1,0 +1,32 @@
+{% include "basic.html" %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Wellcome</strong> Thank you for visit my website.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="contuner">
+    <h2 class="text-center">Contact With Us</h2>
+    <form action="/contact" method="POST" >
+      {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label" >Name </label>
+            <input type="name" class="form-control" id="name" name="name" placeholder="Type Your Name">
+          </div>
+        <div class="mb-3">
+            <label for="email" class="form-label" >Email </label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Type Your Email">
+          </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label" >Phone </label>
+            <input type="number" class="form-control" id="phone" name="phone" placeholder="Phone Number">
+          </div>
+          <div class="mb-3">
+            <label for="disc" class="form-label">Your Comment</label>
+            <textarea class="form-control" id="disc" name= "disc" placeholder="Samething say"rows="3"></textarea>
+          </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+</div>
+<br><br><br>
+<footer class="bg-success">
+    <p class="text-center text-white">© Copyright 2025 Moslemgonj. All Rights Reserved,Daveloper by Bayezid</p>
+    </footer>
